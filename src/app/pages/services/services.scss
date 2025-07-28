@@ -1,0 +1,109 @@
+.services-hero {
+  background: linear-gradient(100deg, #584fde 50%, #36b7ee 100%);
+  .display-4 {
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .lead {
+    color: #e0e7ef;
+  }
+}
+
+.service-card {
+  border-radius: 1.4rem;
+  box-shadow: 0 6px 32px rgba(80, 80, 160, 0.08);
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.36s;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    transform: translateY(-8px) scale(1.045);
+    box-shadow: 0 24px 60px rgba(34, 80, 200, 0.16);
+    .icon-circle {
+      box-shadow: 0 4px 20px #d946ef46;
+      animation: neonPulse 0.7s;
+    }
+    .service-card-bg {
+      opacity: 0.17;
+      transform: scale(1.18) rotate(6deg);
+    }
+  }
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #5b21b6 60%, #36b7ee 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 16px #36b7ee33;
+    color: #fff;
+    font-size: 2rem;
+    transition: box-shadow 0.25s, transform 0.25s;
+    &.icon-info {
+      background: linear-gradient(135deg, #36b7ee, #5b21b6);
+    }
+    &.icon-warning {
+      background: linear-gradient(135deg, #fbbf24, #36b7ee);
+    }
+    &.icon-success {
+      background: linear-gradient(135deg, #22c55e, #2563eb);
+    }
+    &.icon-danger {
+      background: linear-gradient(135deg, #ef4444, #5b21b6);
+    }
+    &.icon-purple {
+      background: linear-gradient(135deg, #8b5cf6, #36b7ee);
+    }
+    &.icon-indigo {
+      background: linear-gradient(135deg, #6366f1, #5b21b6);
+    }
+    &.icon-teal {
+      background: linear-gradient(135deg, #14b8a6, #2563eb);
+    }
+    &.icon-pink {
+      background: linear-gradient(135deg, #ec4899, #36b7ee);
+    }
+  }
+  .service-card-bg {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 20%, #d946ef48 0%, #5b21b60a 85%);
+    opacity: 0.13;
+    z-index: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: opacity 0.26s, transform 0.3s;
+    border-radius: 60% 70% 60% 80% / 60% 70% 80% 60%;
+  }
+  .btn-gradient {
+    background: linear-gradient(90deg, #d946ef 42%, #2563eb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 2em;
+    transition: background 0.16s;
+    font-weight: 600;
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #2563eb 40%, #d946ef 90%);
+      color: #fff;
+    }
+  }
+}
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 0 0 #d946ef44;
+  }
+  70% {
+    box-shadow: 0 0 0 14px #d946ef11;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #d946ef44;
+  }
+}

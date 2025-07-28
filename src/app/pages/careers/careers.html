@@ -1,0 +1,142 @@
+<main class="career-page">
+    <!-- Hero Banner -->
+    <section class="career-hero text-white py-5">
+        <div class="container text-center py-4">
+            <h1 class="display-4 fw-bold mb-3">Careers at Technova</h1>
+            <p class="lead mb-0">Join our innovative and driven team. Explore current opportunities and build your
+                career with us.</p>
+        </div>
+    </section>
+
+    <section id="career" class="py-5 bg-light">
+        <div class="container px-3">
+            <div class="mb-5 text-center text-secondary">
+                <h4 class="fw-semibold mb-3">Why Work With Us?</h4>
+                <ul class="list-unstyled mb-0">
+                    <li>Innovative work environment fostering creativity.</li>
+                    <li>Career growth and continuous learning opportunities.</li>
+                    <li>Supportive team culture with open communication.</li>
+                    <li>Competitive compensation and benefits.</li>
+                </ul>
+            </div>
+            <div class="row gy-4">
+                <div class="col-md-4" *ngFor="let job of jobOpenings">
+                    <div class="card h-100 shadow-sm rounded-4">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-semibold text-primary">{{ job.title }}</h5>
+                            <p class="text-secondary mb-1"><strong>Location:</strong> {{ job.location }}</p>
+                            <p class="text-secondary mb-2"><strong>Experience:</strong> {{ job.experience }}</p>
+                            <p class="card-text text-muted mb-4">{{ job.description }}</p>
+                            <a href="{{ job.applyLink }}" target="_blank"
+                                class="mt-auto btn btn-outline-primary rounded-pill">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="#" class="btn btn-outline-primary btn-lg px-5 rounded-pill fw-semibold portfolio-viewall">
+                        View All Vacancies
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Inquiry / Application Form Section (with Card) -->
+    <section id="application-form" class="py-5 bg-white">
+        <div class="container px-3">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <!-- Attractive Application Form (Card, Icon, Elevated, Angular+Bootstrap) -->
+                    <div class="card shadow-lg border-0 rounded-4 mb-5 app-form-card">
+                        <div class="card-body p-5">
+                            <form (ngSubmit)="onSubmit()" #appForm="ngForm" novalidate>
+                                <div class="text-center mb-4">
+                                    <span
+                                        class="d-inline-flex justify-content-center align-items-center mb-2 app-form-avatar shadow">
+                                        <i class="bi bi-person-plus-fill fs-2 text-white"></i>
+                                    </span>
+                                    <h2 class="fw-bold text-primary mb-1">Apply Now</h2>
+                                    <p class="text-secondary mb-0">Start your journey with us – fill out the form below!
+                                    </p>
+                                </div>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="fullName" class="form-label">Full Name</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light"><i class="bi bi-person"></i></span>
+                                            <input type="text" id="fullName" name="fullName" class="form-control"
+                                                ngModel required placeholder="John Doe" />
+                                        </div>
+                                        <div class="text-danger small"
+                                            *ngIf="appForm.submitted && !appForm.controls['fullName']?.valid">Name is
+                                            required.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email address</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light"><i
+                                                    class="bi bi-envelope"></i></span>
+                                            <input type="email" id="email" name="email" class="form-control" ngModel
+                                                required email placeholder="john@example.com" />
+                                        </div>
+                                        <div class="text-danger small"
+                                            *ngIf="appForm.submitted && !appForm.controls['email']?.valid">Valid email
+                                            is required.</div>
+                                    </div>
+                                </div>
+
+                                <div class="row g-3 mt-0">
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label mt-3 mt-md-0">Phone Number</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light"><i
+                                                    class="bi bi-telephone"></i></span>
+                                            <input type="tel" id="phone" name="phone" class="form-control" ngModel
+                                                placeholder="+1 234 567 8900" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="position" class="form-label mt-3 mt-md-0">Position Interested
+                                            In</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text bg-light"><i
+                                                    class="bi bi-briefcase"></i></span>
+                                            <select id="position" name="position" class="form-select" ngModel required>
+                                                <option value="" disabled selected>Select a position</option>
+                                                <option *ngFor="let job of jobOpenings" [value]="job.title">{{ job.title
+                                                    }}</option>
+                                            </select>
+                                        </div>
+                                        <div class="text-danger small"
+                                            *ngIf="appForm.submitted && !appForm.controls['position']?.valid">Please
+                                            select a position.</div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 mt-4">
+                                    <label for="message" class="form-label">Additional Message</label>
+                                    <textarea id="message" name="message" class="form-control" rows="4" ngModel
+                                        placeholder="Tell us more about yourself or any questions..."></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit"
+                                        class="btn btn-gradient px-5 py-2 rounded-pill text-white fw-semibold shadow-sm">
+                                        <i class="bi bi-send-fill me-2"></i> Submit Application
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</main>

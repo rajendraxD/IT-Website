@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container">
+    <a class="navbar-brand logo" routerLink="/">TechNova</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item" *ngFor="let link of navLinks">
+          <a 
+            class="nav-link" 
+            [routerLink]="link.path" 
+            routerLinkActive="active-link" 
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            {{ link.label }}
+          </a>
+        </li>
+      </ul>
+      <button class="btn btn-gradient ms-lg-4 d-none d-lg-inline">Get Started</button>
+    </div>
+  </div>
+</nav>

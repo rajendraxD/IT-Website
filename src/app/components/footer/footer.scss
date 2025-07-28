@@ -1,0 +1,54 @@
+.footer-section {
+  background: #23272f;
+  color: #f3f4f6;
+  a.footer-link {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.18s;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+  .social-icon {
+    transition: color 0.18s, transform 0.18s;
+    color: #d1d5db;
+
+    &:hover {
+      color: #0ea5e9;
+      transform: scale(1.11);
+    }
+  }
+  .form-control {
+    border-radius: 1.5rem 0 0 1.5rem;
+    padding: 0.6rem 1.2rem;
+    box-shadow: none;
+    border: none;
+    background: #f1f5f9;
+    font-size: 1rem;
+  }
+  .btn-primary {
+    border-radius: 0 1.5rem 1.5rem 0;
+    background: linear-gradient(90deg, #2563eb 70%, #5b21b6 100%);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 18px rgba(73, 110, 255, 0.09);
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #5b21b6 10%, #2563eb 100%);
+      color: #fff;
+    }
+  }
+  .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    background: #e8eafd;
+  }
+  .border-top {
+    border-color: #374151 !important;
+  }
+}

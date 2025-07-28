@@ -1,0 +1,91 @@
+.career-hero {
+  background: linear-gradient(100deg, #584fde 50%, #36b7ee 100%);
+  .display-4 {
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .lead {
+    color: #e0e7ef;
+  }
+}
+
+#career {
+  h2,
+  h4,
+  h5 {
+    letter-spacing: 0.5px;
+  }
+  .card {
+    transition: box-shadow 0.3s ease;
+    &:hover {
+      box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15);
+    }
+  }
+}
+
+#application-form {
+  .card {
+    background: #fff;
+    border: none;
+    box-shadow: 0 1.5rem 3rem rgba(33, 37, 41, 0.08);
+  }
+  h2 {
+    letter-spacing: 0.5px;
+  }
+  .form-label {
+    font-weight: 500;
+  }
+  .form-control,
+  .form-select {
+    transition: border-color 0.3s, box-shadow 0.3s;
+    &:focus {
+      border-color: #0d6efd;
+      box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.12);
+    }
+  }
+  .btn-primary {
+    transition: background 0.2s;
+    &:hover {
+      background: #0b5ed7;
+    }
+  }
+
+  .app-form-card {
+    background: linear-gradient(135deg, #edf4fc 0%, #fff 65%);
+    border: none;
+    .card-body {
+      border-radius: 2rem;
+    }
+  }
+
+  .app-form-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, #0d6efd 30%, #275283 70%);
+    border-radius: 50%;
+    box-shadow: 0 0.5rem 1.5rem rgba(13, 110, 253, 0.06);
+  }
+
+  .btn-gradient {
+    background: linear-gradient(90deg, #0d6efd 60%, #009ffd 100%);
+    border: none;
+    color: #fff;
+    box-shadow: 0 0.1rem 0.6rem rgba(0, 67, 255, 0.18);
+    &:hover,
+    &:focus {
+      background: linear-gradient(90deg, #0a58ca 65%, #0079b3 100%);
+      color: #fff;
+    }
+  }
+
+  .input-group-text {
+    color: #0d6efd;
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.1rem rgba(13, 110, 253, 0.18);
+  }
+}
