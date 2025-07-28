@@ -117,11 +117,17 @@
                                             select a position.</div>
                                     </div>
                                 </div>
-
                                 <div class="mb-3 mt-4">
                                     <label for="message" class="form-label">Additional Message</label>
                                     <textarea id="message" name="message" class="form-control" rows="4" ngModel
                                         placeholder="Tell us more about yourself or any questions..."></textarea>
+                                </div>
+                                <div class="mb-3 mt-4">
+                                    <label for="message" class="form-label me-2">{{ 'Attachments' }}</label>
+                                    <input type="file" name="" id="">
+                                    <div class="form-text mt-1">
+                                        You can upload files up to 5MB. Allowed types: .jpg, .png, .pdf, .docx
+                                    </div>
                                 </div>
                                 <div class="text-center">
                                     <button type="submit"
