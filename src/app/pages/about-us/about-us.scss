@@ -14,9 +14,6 @@
   h5 {
     letter-spacing: 0.5px;
   }
-  .shadow-sm {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05) !important;
-  }
   p {
     font-size: 1rem;
   }
@@ -25,6 +22,147 @@
       padding-left: 0;
       margin-bottom: 0.5rem;
       font-weight: 500;
+    }
+  }
+
+  /* Our story */
+  .our-story-section {
+    background-color: #fff;
+
+    h2 {
+      letter-spacing: 0.5px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    svg {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .overlay-text {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5rem;
+
+      h3 {
+        letter-spacing: 0.8px;
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    /* Responsive paddings for section */
+    @media (min-width: 768px) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  /* Our value section */
+  .our-values-section {
+    background-color: #f8f9fa; // Bootstrap's bg-light, for consistency.
+    .card {
+      transition: box-shadow 0.3s, transform 0.3s;
+      &:hover,
+      &:focus-within {
+        box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
+        transform: translateY(-4px) scale(1.025);
+      }
+    }
+    .rounded-circle {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.06);
+      font-size: 2rem;
+    }
+    h2 {
+      letter-spacing: 0.5px;
+    }
+    .fs-4,
+    .fs-5 {
+      font-weight: 500;
+    }
+  }
+  .text-purple {
+    color: #6f42c1 !important;
+  }
+  .bg-purple {
+    background-color: #f3ebfa !important;
+  }
+  /* Our service section */
+  .our-services-section {
+    .card {
+      border-radius: 1.25rem;
+      box-shadow: 0 1.5rem 3rem rgba(33, 37, 41, 0.1);
+      transition: box-shadow 0.3s, transform 0.3s;
+      &:hover,
+      &:focus-within {
+        box-shadow: 0 2.5rem 4rem rgba(33, 37, 41, 0.16);
+        transform: translateY(-5px) scale(1.02);
+      }
+      .card-body {
+        border-radius: 0 0 1.25rem 1.25rem;
+      }
+      .h-3 {
+        height: 0.8rem;
+        min-height: 0.8rem;
+      }
+    }
+    .service-icon svg {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: inline-block;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #0d6efd 70%, #6a5acd 100%);
+      border: none;
+      font-weight: 600;
+      transition: background 0.15s;
+      &:hover {
+        background: linear-gradient(90deg, #084298 45%, #6a5acd 100%);
+      }
+    }
+    @media (min-width: 768px) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+  /* Team section */
+  .team-section {
+    background-color: #f8f9fa; // Bootstrap's bg-light for consistency
+
+    .team-member-card {
+      transition: box-shadow 0.3s, transform 0.3s;
+      &:hover,
+      &:focus-within {
+        box-shadow: 0 1.5rem 3rem rgba(33, 37, 41, 0.1);
+        transform: translateY(-4px) scale(1.025);
+      }
+      .svg-placeholder {
+        width: 100%;
+        height: 210px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    h2 {
+      letter-spacing: 0.5px;
+    }
+
+    .card-body {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
     }
   }
 }
