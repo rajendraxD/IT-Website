@@ -4,17 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,       // needed for ngModel
-    ReactiveFormsModule,
-    RouterModule,      // imports RouterLink, RouterOutlet etc
-  ],
-  exports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-  ]
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+  exports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
 })
 export class SharedModule {}
