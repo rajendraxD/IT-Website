@@ -189,35 +189,6 @@
   // .text-blue-600, .text-purple-600, etc, can be handled by context or utility classes
 }
 
-//About section
-.about-section {
-  background: #fff;
-  .about-icon-circle {
-    width: 2.7rem;
-    height: 2.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 1.1rem;
-    background: #e0e7ff;
-    color: #2563eb;
-    min-width: 2.7rem;
-    margin-top: 0.15rem;
-  }
-  .btn-primary {
-    background: linear-gradient(90deg, #3b82f6 70%, #8b5cf6 100%);
-    border: none;
-    font-weight: 600;
-    transition: background 0.16s;
-    &:hover,
-    &:focus {
-      background: linear-gradient(90deg, #6366f1 40%, #2563eb 100%);
-      color: #fff;
-    }
-  }
-}
-
 //Portfolio section
 .portfolio-section {
   background: #f8fafc;
