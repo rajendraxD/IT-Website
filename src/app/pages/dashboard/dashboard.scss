@@ -42,13 +42,14 @@
   }
 
   .btn-outline-secondary {
+    background: linear-gradient(90deg, #5b21b6, #d946ef);
     color: #fff;
-    border: 2px solid #fff;
+    border: none;
 
     &:hover {
-      background: #fff;
+      background: linear-gradient(90deg, #5b21b6, #2563eb);
       color: #2563eb;
-      border-color: #fff;
+      color: #fff;
     }
   }
 
@@ -161,16 +162,20 @@
     }
     // Responsive
     @media (max-width: 991.98px) {
-      .service-card{
-        text-align: center !important;
-        margin: 0 auto;
+      text-align: center !important;
+      .service-card,
+      .icon-circle {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
     @media (max-width: 767.98px) {
-      .service-card{
-        text-align: center !important;
-        margin: 0 auto;
+      text-align: center !important;
+      .service-card,
+      .icon-circle {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
@@ -291,6 +296,19 @@
       border-color: #2563eb;
     }
   }
+  // Responsive
+    @media (max-width: 991.98px) {
+      text-align: center !important;
+      .badge-tech-div{
+        align-items: center !important;
+        justify-content: center !important;
+        
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      text-align: center !important;
+    }
 }
 
 //Portfolio section
